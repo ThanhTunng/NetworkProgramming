@@ -18,7 +18,7 @@ public class UDPclient {
 		String sentence = inputFromUser.readLine();
 		sendData = sentence.getBytes();
 		
-		DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 6969);
+		DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 5000);
 		clientSocket.send(sendPacket);
 		
 		DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
